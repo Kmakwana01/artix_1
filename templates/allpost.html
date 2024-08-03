@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/custom1.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+    {% include "header.html" %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mt-5">{{finaldata.0.categori}}</h1>
+                <div class="decorative-line">
+                    <div class="decorative-line-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16.395" height="20.284"
+                            viewBox="0 0 16.395 20.284">
+                            <g data-name="Group 197" transform="translate(-689.803 -586.663)">
+                                <rect data-name="Rectangle 362" width="7" height="13"
+                                    transform="translate(692.403 591.991) rotate(-21)" fill="#fff"></rect>
+                                <rect data-name="Rectangle 198" width="0.999" height="19.965"
+                                    transform="translate(690.449 587.668) rotate(-21.05)" stroke="#000"
+                                    stroke-width="1"></rect>
+                                <rect data-name="Rectangle 199" width="0.999" height="19.965"
+                                    transform="translate(697.448 587.668) rotate(-21.05)" stroke="#000"
+                                    stroke-width="1"></rect>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% for x in finaldata %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 m-auto col-xl-8">
+                    <div class="post1">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="img responsiveimg">
+                                    <a href="{{x.new_slug}}/">
+                                        <img class="img1" src="{% static x.main_img_src %}" alt="Home"
+                                            style="height:100%;">
+                                    </a>
+                                    <div class="hhgy d-lg-none">
+                                        <a href="{% url x.categori %}">
+                                            <button
+                                                class="shape">{{x.categori}}</button></a>
+                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="context">
+                                    <div class="hhgy1 d-none d-lg-block mt-4"><a href="{% url x.categori %}"><button
+                                                class="shape">{{x.categori}}</button></a></div>
+                                    <a href="{{x.new_slug}}">
+                                        <h2>{{x.main_heading}}</h2>
+                                    </a>
+                                    <a href="{{x.new_slug}}">
+                                        <p>{{x.description | truncatewords:10 }}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+    <div class="container">
+        <div class="row">
+          
+            <nav aria-label="Page navigation example" style="display: flex; margin-top : 45px;">
+                <ul class="pagination" style="display: inline-flex;margin:  auto !important; ">
+                    {% if finaldata.has_previous %}
+                    <li class="page-item" style="outline: none;"><a class="page-link" style="color: black;"
+                            href="/{{categoriname}}/?page={{finaldata.previous_page_number}}">&larr; Previous</a></li>
+                    <li class="page-item" style="outline: none;"><a class="page-link" style="color: black;"
+                            href="/{{categoriname}}/?page={{minusnumber}}">{{minusnumber}}</a></li>
+                    {% endif %}
+                    <li class="page-item" style="outline: none;"><a class="page-link" style="color: black;"
+                            href="/{{categoriname}}/?page={{finaldata.number}}">{{finaldata.number}}</a></li>
+                    {% if finaldata.has_next %}
+                    <li class="page-item" style="outline: none;"><a class="page-link" style="color: black;"
+                            href="/{{categoriname}}/?page={{plusnumber}}">{{plusnumber}}</a></li>
+                    <li class="page-item" style="outline: none; box-shadow: none !important;"><a class="page-link" style="color: black;"
+                            href="/{{categoriname}}/?page={{finaldata.next_page_number}}">Next</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="mb-5"></div>
+
+    {% include "footer.html" %}
+
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

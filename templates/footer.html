@@ -1,0 +1,55 @@
+<footer class="py70 ert">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div class="logo">
+                    <pre
+                        class="mainlogo"><i class="fa-brands fa-artstation"></i><span style="margin-left: 5px;">ArtiX</span></pre>
+                </div>
+                <p>268 St, South New York/NY 98944,<br> United States.</p>
+                <p class="mt-8">+222-1800-2628</p>
+                <p class="mt-8">abcd@gmail.com</p>
+                <div class="icon3 mt-24">
+                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2 mb-4">
+                <ul class="foot">
+                    <li>
+                        <h6>CATEGORIES</h6>
+                    </li>
+                    <li><a href="{% url "ARCHITECTURE" %}">Architecture</a></li>
+                    <li><a href="{% url "HOME FURNISHING" %}">Homefurnishing</a></li>
+                    <li><a href="{% url "TECHNOLOGY" %}">Technology</a></li>
+                    <li><a href="{% url "LIFESTYLE" %}">Lifestyle</a></li>
+                    <li><a href="{% url "TRAVEL" %}">Travel</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2 mb-4">
+                <ul class="foot">
+                    <li>
+                        <h6>CUSTOMER SERVICE</H6>
+                    </li>
+                    <li><a href="{% url "PRIVACY" %}">Privacy Policy</a></li>
+                    <li><a href="{% url "TERMS" %}">Term & Conditions</a></li>
+                    <li><a href="{%  url "FAQ" %}">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div>
+                    <h6>SIGN UP</h6>
+                </div>
+                <div class="mt-24">
+                    <form>
+                        {% comment %} {% csrf_token %} {% endcomment %}
+                        <input type="text" name="email" class="inn me-2" placeholder="Enter Your Email">
+                        <button class="btnn" type="button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</footer>

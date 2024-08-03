@@ -1,0 +1,154 @@
+<header class="flex a-c position-sticky top-0 font">
+    <div class="logo a-c me--auto center">
+        <pre class="mainlogo"><i class="fa-brands fa-artstation"></i><span style="margin-left: 5px;">ArtiX</span></pre>
+    </div>
+    <nav class="a-c">
+        <ul class="menubar">
+            <li><a href="{% url "HOME" %}">Home</a></li>
+            <li><a href="{% url "ARCHITECTURE" %}">Architecture</a></li>
+            <li><a href="{% url "HOME FURNISHING" %}">Home Furnishing</a></li>
+            <li><a href="{% url "TRAVEL" %}">Travel</a></li>
+            {% comment %} <li><a href="#">Education</a>
+                <div class="submenu">
+                    <div class="flex megamenu">
+                        <ul style="width: 130px;">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                        </ul>
+                        <ul style="width: 130px;">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                        </ul>
+                        <ul style="width: 130px;">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li> {% endcomment %}
+            <li><a href="{% url "TECHNOLOGY" %}">Technology</a>
+                {% comment %} <div class="submenu2">
+                    <ul style="width: 150px; ">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                </div> {% endcomment %}
+            </li>
+            {% comment %} <li><a href="#">Entertainment</a></li> {% endcomment %}
+            <li><a href="{% url 'LIFESTYLE' %}">Lifestyle</a></li>
+            <li><a href="{% url 'CONTACT_US' %}">Contact_us</a></li>
+        </ul>
+    </nav>
+    <div class="icon a-c ms--auto center">
+
+        <form action="/search/" method="get">
+            <div class="searchmain">
+                <input type="text" class="search" name="search" placeholder="Search...">
+                <button class="search-btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </form>
+        <!-- <i><button class="login">Login</button></i> -->
+    </div>
+    <div class="bar a-c">
+        <span style="font-size:30px;cursor:pointer" class="center" onclick="openNav()"><i class="fa-solid fa-bars"
+                style="font-size: 25px;"></i></span>
+    </div>
+    <div id="myNav" class="overlay " style="z-index: 999;">
+        <div class="d-flex flex s-b p-10" style="background-color: black;  font-size: 12px;"> <a href="#"
+                class="d-flex align-items-center" style="color: white;"><span>Menu</span>
+            </a> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-arrow-left"
+                    style="font-size: 20px; color: white;"></i></a></div>
+        <div class="overlay-content">
+            <div class="container" style="margin: auto;">
+                <ul>
+                    <a href="{% url "HOME" %}">
+                        <li class="accordion gg">Home</li>
+                    </a>
+                    {% comment %} <li class="accordion">Shop</li>
+                    <div class="panel">
+                        <ul class="hhh">
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                        </ul>
+                    </div> {% endcomment %}
+                    {% comment %} <li class="accordion">Product</li>
+                    <div class="panel">
+                        <ul class="hhh">
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                            <DIV class="HHRR"></DIV>
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                            <li>
+                                <pre><a href="#"><i class="fa-solid fa-arrow-right"></i>  Home</a></pre>
+                            </li>
+                        </ul>
+                    </div> {% endcomment %}
+                    <a href="{% url "ARCHITECTURE" %}">
+                        <li class="accordion gg">Architecture</li>
+                    </a>
+                    <a href="{% url "HOME FURNISHING" %}">
+                        <li class="accordion gg">Home Furnishing</li>
+                    </a>
+                    <a href="{% url "LIFESTYLE" %}">
+                        <li class="accordion gg">Lifestyle</li>
+                    </a>
+                    <a href="{% url "TRAVEL" %}">
+                        <li class="accordion gg">Travel</li>
+                    </a>
+                    <a href="{% url "CONTACT_US" %}">
+                        <li class="accordion gg">Contact_Us</li>
+                    </a>
+                    <a href="{% url "PRIVACY" %}">
+                        <li class="accordion gg">Privacy Policy</li>
+                    </a>
+                    <a href="{% url "TERMS" %}">
+                        <li class="accordion gg">Term & Conditions</li>
+                    </a>
+                    <a href="{%  url "FAQ" %}">
+                        <li class="accordion gg">FAQs</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

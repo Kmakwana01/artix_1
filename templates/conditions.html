@@ -1,0 +1,495 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/custom1.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        /* faq acordding */
+        .accordion11 {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active11,
+        .accordion11:hover {
+            background-color: #ccc;
+        }
+
+        .accordion11:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active11:after {
+            content: "\2212";
+        }
+
+        .panel11 {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .panel11 p{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f9f9f9;">
+
+    {% include "header.html" %}
+    {% if one %}
+    <div class="container font py-5" style="overflow: hidden;">
+        <div class="row">
+            <div class="text-center">
+                <h1>Terms & Conditions</h1>
+                <div class="shape2"></div>
+            </div>
+        </div>
+        <div class="row mt-4">
+
+            <div>
+                <h4>1. Introduction:</h4>
+                <p style="list-style-type: circle; margin-left:30px;">- Begin with an introductory section explaining
+                    the purpose and scope of the terms and conditions.</p>
+            </div>
+
+            <div>
+                <h4 class="mt-3">2. Acceptance of Terms:</h4>
+                <p style="list-style-type: circle; margin-left:30px;">- Clearly state that by using your website or
+                    service, users agree to abide by the terms and conditions.</p>
+            </div>
+            <ul style="list-style-type: none;" class="mt-3">
+                <li>
+                    <h4>3. User Responsibilities:</h4>
+                    <ul style="margin-left:30px">
+                        <li style="list-style-type: none;">- Outline the responsibilities of users, including:
+                            <ul style="margin-left:60px; " class="mt-2">
+                                <li style="list-style-type:circle;">Compliance with applicable laws.</li>
+                                <li style="list-style-type:circle;">Respectful and responsible use of the website.</li>
+                                <li style="list-style-type:circle;">Prohibited activities, such as spamming, hacking, or
+                                    harassment.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4 class="mt-3">4. User Rights and Responsibilities:</h4>
+            <p style="list-style-type: circle; text-indent:30px;">- Outline the rights and responsibilities of users,
+                including prohibited actions.</p>
+            <ul style="list-style-type: none;">
+                <li>
+                    <h4>5. Content Guidelines:</h4>
+                    <ul style="margin-left:30px">
+                        <li style="list-style-type: none;">- Define rules for user-generated content, including:
+                            <ul style="margin-left:60px; " class="mt-2">
+                                <li style="list-style-type:circle;">Content submission guidelines.</li>
+                                <li style="list-style-type:circle;">Copyright and intellectual property rights.</li>
+                                <li style="list-style-type:circle;">Prohibitions on hate speech, discriminatory content,
+                                    or illegal material.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div>
+                <h4 class="mt-3">6. Dispute Resolution:</h4>
+                <p style="margin-left:30px;">- Detail how disputes between users or between users and your blog website
+                    will be resolved. This may include arbitration or mediation.</p>
+            </div>
+            <div>
+                <h4 class="mt-3">7. Changes to Terms:</h4>
+                <p style="margin-left:30px;">- State your right to update the terms and conditions and how you will
+                    notify users of changes.</p>
+            </div>
+            <div>
+                <h4 class="mt-3">8. Contact Information:</h4>
+                <p style="margin-left:30px;">- Provide contact details for users to reach out for questions or concerns.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if two %}
+    <div class="container font py-5" style="overflow: hidden;">
+        <div class="row">
+            <div class="text-center">
+                <h1>Privacy Policy </h1>
+                <div class="shape2"></div>
+            </div>
+        </div>
+        <div class="row mt-4">
+
+            <div>
+                <h4>1. Information We Collect:</h4>
+                <p style="list-style-type: circle; margin-left:30px;">- We may collect your name, email address, and
+                    other optional information you provide when you subscribe to our newsletter or leave comments on our
+                    posts.</p>
+            </div>
+
+            <div>
+                <h4 class="mt-3">2. How We Use Your Information:</h4>
+                <p style="list-style-type: circle; margin-left:30px;">- We use your data to send you blog updates,
+                    respond to comments, and improve our content.</p>
+            </div>
+
+            <h4 class="mt-3">3. Cookies and Analytics:</h4>
+            <p style="list-style-type: circle; text-indent:30px;">- We use cookies to enhance your experience on our
+                site. We also use Google Analytics to track anonymous usage data.</p>
+
+
+            <div>
+                <h4 class="mt-3">4. Third-Party Links:</h4>
+                <p style="margin-left:30px;">- Our blog may contain links to other websites. We are not responsible for
+                    their privacy practices.</p>
+            </div>
+            <div>
+                <h4 class="mt-3">5. Data Security:</h4>
+                <p style="margin-left:30px;">- We implement security measures to protect your information but cannot
+                    guarantee its absolute security.</p>
+            </div>
+            <div>
+                <h4 class="mt-3">6. Updates to This Policy:</h4>
+                <p style="margin-left:30px;">- We may update this Privacy Policy. Please review it periodically.</p>
+            </div>
+            <div>
+                <h4 class="mt-3">7. Your Choices:</h4>
+                <p style="margin-left:30px;">- You can opt-out of our newsletter at any time and manage cookie
+                    preferences in your browser.</p>
+            </div>
+            <div>
+                <h4 class="mt-3">8. Contact Us:</h4>
+                <p style="margin-left:30px;">- If you have any questions or concerns, you can contact us at +1 123 123
+                    123.</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if three %}
+    <div class="container">
+        <div class="row">
+            <div class="text-center mt-4">
+                <h1>FAQs</h1>
+                <div class="shape2"></div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <h2></h2>
+            <button class="accordion11">1. What topics does your blog cover in the Home Furnishing category?</button>
+            <div class="panel11">
+                <p>Our Home Furnishing category explores a wide range of topics, including interior design tips, furniture recommendations, home decor ideas, and advice on creating a comfortable and stylish living space.</p>
+            </div>
+            
+            <button class="accordion11">2. Can I find travel recommendations or guides on your blog?</button>
+            <div class="panel11">
+              <p>Absolutely! Our Travel section offers travel guides, destination recommendations, packing tips, and travel stories to inspire and assist you in planning your next adventure.</p>
+            </div>
+            
+            <button class="accordion11">3. What kind of technology content can I expect on your blog?</button>
+            <div class="panel11">
+              <p>In our Technology category, we delve into the latest tech trends, gadget reviews, software recommendations, and provide insights on how technology impacts our daily lives.</p>
+            </div>
+            <button class="accordion11">4. Do you have content related to architecture and home design?</button>
+            <div class="panel11">
+              <p>Yes, we do! Our Architecture category covers architectural styles, home design principles, building tips, and architectural innovations to help you create your dream living space.</p>
+            </div>
+            <button class="accordion11">5. How does your blog address topics related to lifestyle?</button>
+            <div class="panel11">
+              <p>Our Lifestyle category explores a variety of lifestyle aspects, including wellness, personal development, fitness, fashion, and general life advice to help you live your best life.</p>
+            </div>
+            <button class="accordion11">6. Do you provide product recommendations for home furnishing, technology, and lifestyle products?</button>
+            <div class="panel11">
+                <p>Yes, we often share product recommendations and reviews in our respective categories. You'll find suggestions for top-quality home furnishing items, the latest gadgets, and lifestyle products to enhance your everyday living.</p>
+              </div>
+            <button class="accordion11">7. How frequently is new content published in each category?</button>
+            <div class="panel11">
+                <p>We strive to provide fresh content regularly. New articles are typically published in each category [mention your posting schedule, e.g., "once a week"] to keep you updated on the latest trends, tips, and advice in the respective fields.
+                    These FAQs provide a clear overview of what your blog covers in each category and offer information on how users can engage with your content or collaborate with your platform. Feel free to customize and expand upon these questions as needed to suit your blog's unique focus and audience.</p>
+              </div>
+        </div>
+    </div>
+
+    {% endif %}
+
+
+{% if four %}
+    <section class="ndk py60 font" data-aos="fade-up" data-aos-duration="1000" style="background-color: #f9f9f9;">
+        <div class="container">
+          <form action="{% url 'SAVE_DATA' %}" method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="text-center">
+                <h2>Contact US</h2>
+                <div class="shape2"></div>
+              </div>
+            </div>
+            <div class="row mmt-5 mt-4">
+              <div class="col-12 col-md-7" data-aos="fade-up" data-aos-duration="1000">
+                <div class="row bbnn">
+                  <div class="col-12 col-md-6 mt-4">
+                    <input type="text" required name="name" placeholder="Name" style="width: 100%;">
+                  </div>
+                  <div class="col-12 col-md-6 mt-4">
+                    <input type="email" required name="email" placeholder="Email" style="width: 100%;">
+                  </div>
+                  <div class="col-12 mt-4">
+                    <input type="text" required name="fav_categori" placeholder="Enter Your Favourite Categori"
+                      style="width: 100%;">
+                  </div>
+                  <div class="col-12 mt-4">
+                    <textarea name="message" required id="" cols="30" rows="6" placeholder="Your Message"
+                      style="width: 100%;"></textarea>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button class="btnn" type="submit">SEND MESSAGE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-5 mt-4" data-aos="fade-up" data-aos-duration="1000">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119003.1250405812!2d72.86335200000002!3d21.23788879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1692708155006!5m2!1sen!2sin"
+                  style="border:0; width: 100%; height: 300px;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      {% endif %}
+
+      {% if search %}
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mt-5">{{value | safe}}</h1>
+                <div class="decorative-line">
+                    <div class="decorative-line-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16.395" height="20.284"
+                            viewBox="0 0 16.395 20.284">
+                            <g data-name="Group 197" transform="translate(-689.803 -586.663)">
+                                <rect data-name="Rectangle 362" width="7" height="13"
+                                    transform="translate(692.403 591.991) rotate(-21)" fill="#fff"></rect>
+                                <rect data-name="Rectangle 198" width="0.999" height="19.965"
+                                    transform="translate(690.449 587.668) rotate(-21.05)" stroke="#000"
+                                    stroke-width="1"></rect>
+                                <rect data-name="Rectangle 199" width="0.999" height="19.965"
+                                    transform="translate(697.448 587.668) rotate(-21.05)" stroke="#000"
+                                    stroke-width="1"></rect>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% for x in data1%}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 m-auto col-xl-8">
+                    <div class="post1">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="img responsiveimg">
+                                    <a href="/homefurnishing/{{x.new_slug}}/">
+                                        <img class="img1" src="{% static x.main_img_src %}" alt="Home"
+                                            style="height:100%;">
+                                    </a>
+                                    <div class="hhgy d-lg-none"><a href="{% url x.categori %}"><button
+                                                class="shape">{{x.categori}}</button></a></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="context">
+                                    <div class="hhgy1 d-none d-lg-block mt-4"><a href="{% url x.categori %}"><button
+                                                class="shape">{{x.categori}}</button></a></div>
+                                    <a href="/homefurnishing/{{x.new_slug}}">
+                                        <h2>{{x.main_heading  | safe}}</h2>
+                                    </a>
+                                    <a href="/homefurnishing/{{x.new_slug}}">
+                                        <p>{{x.description | truncatewords:10 | safe}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% for x in data2%}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 m-auto col-xl-8">
+                <div class="post1">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="img responsiveimg">
+                                <a href="/architecture/{{x.new_slug}}/">
+                                    <img class="img1" src="{% static x.main_img_src %}" alt="Home" style="height:100%;">
+                                </a>
+                                <div class="hhgy d-lg-none"><a href="{% url x.categori %}"><button
+                                            class="shape">{{x.categori}}</button></a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="context">
+                                <div class="hhgy1 d-none d-lg-block mt-4"><a href="{% url x.categori %}"><button
+                                            class="shape">{{x.categori}}</button></a></div>
+                                <a href="/architecture/{{x.new_slug}}">
+                                    <h2>{{x.main_heading | safe}}</h2>
+                                </a>
+                                <a href="/architecture/{{x.new_slug}}">
+                                    <p>{{x.description | truncatewords:10 | safe}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+    {% for x in data3%}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 m-auto col-xl-8">
+                <div class="post1">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="img responsiveimg">
+                                <a href="/technology/{{x.new_slug}}/">
+                                    <img class="img1" src="{% static x.main_img_src %}" alt="Home" style="height:100%;">
+                                </a>
+                                <div class="hhgy d-lg-none"><a href="{% url x.categori %}"><button
+                                            class="shape">{{x.categori}}</button></a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="context">
+                                <div class="hhgy1 d-none d-lg-block mt-4"><a href="{% url x.categori %}"><button
+                                            class="shape">{{x.categori}}</button></a></div>
+                                <a href="/technology/{{x.new_slug}}">
+                                    <h2>{{x.main_heading | safe}}</h2>
+                                </a>
+                                <a href="/technology/{{x.new_slug}}">
+                                    <p>{{x.description | truncatewords:10 | safe}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+    {% for x in data4%}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 m-auto col-xl-8">
+                <div class="post1">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="img responsiveimg">
+                                <a href="/lifestyle/{{x.new_slug}}/">
+                                    <img class="img1" src="{% static x.main_img_src %}" alt="Home" style="height:100%;">
+                                </a>
+                                <div class="hhgy d-lg-none"><a href="{% url x.categori %}"><button
+                                            class="shape">{{x.categori}}</button></a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="context">
+                                <div class="hhgy1 d-none d-lg-block mt-4"><a href="{% url x.categori %}"><button
+                                            class="shape">{{x.categori}}</button></a></div>
+                                <a href="/lifestyle/{{x.new_slug}}">
+                                    <h2>{{x.main_heading | safe}}</h2>
+                                </a>
+                                <a href="/lifestyle/{{x.new_slug}}">
+                                    <p>{{x.description | truncatewords:10 | safe}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+
+    {% for x in data5%}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 m-auto col-xl-8">
+                <div class="post1">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="img responsiveimg">
+                                <a href="/travel/{{x.new_slug}}/">
+                                    <img class="img1" src="{% static x.main_img_src %}" alt="Home" style="height:100%;">
+                                </a>
+                                <div class="hhgy d-lg-none"><a href="{% url x.categori %}"><button
+                                            class="shape">{{x.categori}}</button></a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="context">
+                                <div class="hhgy1 d-none d-lg-block mt-4"><a href="{% url x.categori %}"><button
+                                            class="shape">{{x.categori}}</button></a></div>
+                                <a href="/travel/{{x.new_slug}}">
+                                    <h2>{{x.main_heading | safe}}</h2>
+                                </a>
+                                <a href="/travel/{{x.new_slug}}">
+                                    <p>{{x.description | truncatewords:10 | safe}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+      {% endif %}
+
+
+    {% include "footer.html" %}
+
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
